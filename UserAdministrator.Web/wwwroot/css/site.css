@@ -1,0 +1,18 @@
+.nav-title {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-title:hover {
+    background-color: #d5cbcb;
+    color: #000000;
+}
+
+.hide-element {
+    display: none;
+}
+
+.img-index {
+    height: 500px;
+    width: auto;
+}

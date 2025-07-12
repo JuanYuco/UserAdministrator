@@ -1,0 +1,31 @@
+﻿@page "/Users/CreateUser"
+@model UserAdministrator.Web.Pages.CreateUserModel
+@{
+}
+
+<div class="w-100 d-flex flex-column">
+    <h4 class="align-self-center">Crear Usuario</h4>
+    <form Id="formCreateUser" class="d-flex flex-column col-6 col-md-6 align-self-center">
+        <div class="form-group w-100">
+            <label for="txtName">Nombre:</label>
+            <input id="txtName" class="form-control" placeholder="nombre" type="text" />
+        </div>
+        <div class="form-group w-100 mt-2">
+            <label for="txtBirthDate">Fecha de Nacimiento:</label>
+            <input id="txtBirthDate" class="form-control" type="Date" />
+        </div>
+        <div class="form-group w-100 mt-2">
+            <label for="slGender">Género:</label>
+            <select id="slGender" class="form-control"">
+                <option value="M">Másculino</option>
+                <option value="F">Femenino</option>
+            </select>
+        </div>
+        <button class="btn btn-primary w-100 mt-2">Guardar</button>
+        <label id="laMessage" class="hide-element">asasaas</label>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/Users/CreateUser.js" asp-append-version="true" type="module"></script>
+}

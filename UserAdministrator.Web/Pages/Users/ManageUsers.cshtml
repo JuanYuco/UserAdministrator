@@ -1,0 +1,24 @@
+﻿@page "/Users/ManageUsers"
+@model UserAdministrator.Web.Pages.Users.ManageUsersModel
+@{
+}
+<div class="d-flex flex-column justify-content-center">
+    <h4 class="align-self-center">Usuarios</h4>
+    <label id="lbMessage" class="hide-element"></label>
+    <table id="tbUsers"class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Género</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tbyUsers">
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/Users/ManageUsers.js" asp-append-version="true" type="module"></script>
+}
