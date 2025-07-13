@@ -12,6 +12,10 @@ namespace UserAdministrator.Api.Services
             this._userRepository = userRepository;
         }
 
+        /// <summary>
+        /// Consulta todos los usuarios creados
+        /// </summary>
+        /// <returns>Un objeto con información del proceso y la colección de usuarios mapeados a una DTO.</returns>
         public async Task<UserCollectionResponseDTO> GetAllAsync()
         {
             var result = new UserCollectionResponseDTO() { Successful = false };
@@ -47,6 +51,11 @@ namespace UserAdministrator.Api.Services
             return result;
         }
 
+        /// <summary>
+        /// Método encargado de crear los usuarios.
+        /// </summary>
+        /// <param name="request">DTO con los datos del usuario a crear.</param>
+        /// <returns>Un objeto con información del proceso.</returns>
         public async Task<CreateUserResponseDTO> CreateAsync(CreateUserRequestDTO request)
         {
             var result = new CreateUserResponseDTO() { Successful = false };
@@ -80,6 +89,11 @@ namespace UserAdministrator.Api.Services
             return result;
         }
 
+        /// <summary>
+        /// Método encargado de actualizar un usuario.
+        /// </summary>
+        /// <param name="request">DTO con los datos del usuario a modificar.</param>
+        /// <returns>Un objeto con información del proceso.</returns>
         public async Task<UpdateUserResponseDTO> UpdateAsync(UpdateUserRequestDTO request)
         {
             var result = new UpdateUserResponseDTO() { Successful = false };
@@ -147,9 +161,14 @@ namespace UserAdministrator.Api.Services
             return message;
         }
 
+        /// <summary>
+        /// Método encargado de eliminar un usuario.
+        /// </summary>
+        /// <param name="id">Entero que contiene el id de un usuario.</param>
+        /// <returns>Un objeto con información del proceso.</returns>
         public async Task<DeleteUserResponseDTO> DeleteAsync(int id)
         {
-            var result = new DeleteUserResponseDTO() { Successful = true };
+            var result = new DeleteUserResponseDTO() { Successful = false };
             
             try
             {
